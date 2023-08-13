@@ -1,0 +1,4 @@
+SECRET_TOKEN_ACCESS=secret1
+SECRET_TOKEN_REFRESH=secret2
+DEV_TOKEN=notsecret
+MONGO_URI=mongodb://localhost:27017/authentification-express
