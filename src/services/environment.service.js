@@ -1,0 +1,11 @@
+
+require("dotenv").config();
+
+const { APPLICATION_PORT, SECRET_TOKEN_ACCESS, SECRET_TOKEN_REFRESH, MONGO_URI } = process.env;
+
+module.exports = {
+    APPLICATION_PORT: Number(APPLICATION_PORT || 3000),
+    SECRET_TOKEN_ACCESS,
+    SECRET_TOKEN_REFRESH,
+    MONGO_URI,
+};
