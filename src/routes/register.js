@@ -18,8 +18,9 @@ router.post("/", async (req, res) => {
   const newUser = await register(username, password);
 
   if (newUser) {
-    const { refreshToken } = generateTokens(newUser);
+    const { accessToken, refreshToken } = generateTokens(newUser);
 
+    res.cookie("accessToken", accessToken);
     res.cookie("refreshToken", refreshToken);
 
     return res.redirect("/login");
